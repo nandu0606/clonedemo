@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>calci</title>
+	<script language="javascript">
+		var oper,prev;
+		function num(s){
+					var n1;
+					n1=parseInt(document.f1.t1.value);
+					n1=n1*10 +s;
+					document.f1.t1.value=n1;
+				}
+		function opr(k){
+					prev=parseInt(document.f1.t1.value);
+					oper=k;
+					document.f1.t1.value=0;
+				}
+		function equal(){
+					var curr=parseInt(document.f1.t1.value);
+					var result;
+					switch(oper)
+					{
+								case 1:result= curr+prev;
+							}
+					document.f1.t1.value=result;
+				}
+	</script>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<form name="f1">
+			<table border=3 cellpadding=7 cellspacing=7>
+				<tr>
+					<td colpsan=2><input type="text" name="t1" id="t1" value="0"></td>
+				</tr>
+				<tr>
+                                        <td ><input type="button" name="0" id="0" value="0" onclick="num(0)"></td>
+					<td ><input type="button" name="7" id="7" value="7" onclick="num(7)"></td>
+
+                                </tr>
+                                <tr>
+                                        <td><input type="button" name="add" id="add" value="+" onclick="opr(1)"></td>
+					<td><input type="button" name="eq" id="eq" value="=" onclick="equal()"></td>
+
+                                </tr>
+			</table>
+		</form>
+	</body>
+</html>
+
